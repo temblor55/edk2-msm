@@ -88,7 +88,8 @@ Include("pmic_batt.asl")
 
 
         // Test Drivers
-        Include("testdev.asl")
+        //Include("testdev.asl")
+		Include("cust_spkr.asl")
 		//
 
         //
