@@ -3,50 +3,39 @@
 //
 Device (SDC2)
 {
-	Name (_DEP, Package (0x02)  // _DEP: Dependencies
-	{
-		\_SB.PEP0, 
-		\_SB.GIO0
-	})
-	Name (_HID, "QCOM2466")  // _HID: Hardware ID
-	Alias (\_SB.PSUB, _SUB)
-	Name (_CID, "ACPIQCOM2466")  // _CID: Compatible ID
-	Name (_UID, One)  // _UID: Unique ID
-	Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
-	Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-	{
-		Name (RBUF, ResourceTemplate ()
-		{
-			Memory32Fixed (ReadWrite,
-				0x08804000,         // Address Base
-				0x00001000,         // Address Length
-				)
-			Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
-			{
-				0x000000EC,
-			}
-			GpioInt (Level, ActiveLow, SharedAndWake, PullUp, 0x7530,
-				"\\_SB.GIO0", 0x00, ResourceConsumer, ,
-				)
-				{   // Pin list
-					0x00C0
-				}
-			GpioIo (Shared, PullUp, 0x0000, 0x0000, IoRestrictionNone,
-				"\\_SB.GIO0", 0x00, ResourceConsumer, ,
-				)
-				{   // Pin list
-					0x007E
-				}
-		})
-		Return (RBUF) /* \_SB_.SDC2._CRS.RBUF */
-	}
+   Name (_DEP, Package(0x2) {
+       \_SB_.PEP0,
+       \_SB_.GIO0
+   })
 
-	Method (_DIS, 0, NotSerialized)  // _DIS: Disable Device
-	{
-	}
+   Name (_HID, "QCOM2466")
+   Name (_UID, 1)
+   Name (_CCA, 0)
+   Alias(\_SB.PSUB, _SUB)
+   //Name (_CID, "ACPI\QCOM2466")
+  
 
-	Method (_STA, 0, NotSerialized)  // _STA: Status
-	{
-		Return (0x0F)
-	}
+   Method (_CRS, 0x0, NotSerialized) {
+       Name (RBUF, ResourceTemplate ()
+       {
+           // SDCC2 register address space
+           Memory32Fixed (ReadWrite, 0x8804000, 0x00001000)
+
+           Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive, , , ) {236}
+
+           // Card detect GPIO
+           GpioInt(Level, ActiveLow, SharedAndWake, PullDown, 30000, "\\_SB.GIO0", ,) {192}
+           Gpioio(Shared, PullDown, 0, 0, , "\\_SB.GIO0", ,) {126}
+       })
+       Return (RBUF)
+   }
+
+   Method(_DIS)
+   {
+      // Place holder to allow disable
+   }
+   Method (_STA) 
+   {
+       Return(0xF)
+   }
 }
