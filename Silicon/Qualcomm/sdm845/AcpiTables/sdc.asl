@@ -9,11 +9,11 @@ Device (SDC2)
    })
 
    Name (_HID, "QCOM2466")
+   Alias(\_SB.PSUB, _SUB)
+   Name (_CID, "ACPI\QCOM2466")
    Name (_UID, 1)
    Name (_CCA, 0)
-   Alias(\_SB.PSUB, _SUB)
-   //Name (_CID, "ACPI\QCOM2466")
-  
+     
 
    Method (_CRS, 0x0, NotSerialized) {
        Name (RBUF, ResourceTemplate ()
@@ -25,7 +25,7 @@ Device (SDC2)
 
            // Card detect GPIO
            GpioInt(Level, ActiveLow, SharedAndWake, PullDown, 30000, "\\_SB.GIO0", ,) {192}
-           Gpioio(Shared, PullDown, 0, 0, , "\\_SB.GIO0", ,) {126}
+           GpioIo(Shared, PullDown, 0, 0, IoRestrictionNone, "\\_SB.GIO0", 0, ResourceConsumer, ,) {126}
        })
        Return (RBUF)
    }
