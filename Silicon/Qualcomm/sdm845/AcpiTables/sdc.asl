@@ -25,7 +25,7 @@ Device (SDC2)
 
            // Card detect GPIO
            GpioInt(Level, ActiveLow, SharedAndWake, PullUp, 30000, "\\_SB.GIO0", ,) {192}
-           GpioIo(Shared, PullUp, 0, 0, IoRestrictionNone, "\\_SB.GIO0", 0, ResourceConsumer, ,) {126}
+           Gpioio(Shared, PullDown, 0, 0, , "\\_SB.GIO0", ,) {126}
        })
        Return (RBUF)
    }
