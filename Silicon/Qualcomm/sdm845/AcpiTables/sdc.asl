@@ -28,11 +28,6 @@ Device (SDC2)
        })
        Return (RBUF)
    }
-
-   Method (_RMV, 0)  // Removable method
-   {
-        Return (0x0)  // 0x0 indicates the device is not removable
-   }
    
    Method(_DIS)
    {
