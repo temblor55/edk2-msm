@@ -13,7 +13,7 @@ Device (SDC2)
    Name (_CID, "ACPI\QCOM2466")
    Name (_UID, 1)
    Name (_CCA, 0)
-
+     
    Method (_CRS, 0x0, NotSerialized) {
        Name (RBUF, ResourceTemplate ()
        {
@@ -23,17 +23,11 @@ Device (SDC2)
            Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive, , , ) {236}
 
            // Card detect GPIO
-           //GpioInt(Edge, ActiveBoth, SharedAndWake, PullUp, 30000, "\\_SB.GIO0", ,) {192} 
-           Gpioio(Shared, PullDown, 0, 0, , "\\_SB.GIO0", ,) {126} 
+           GpioInt(Level, ActiveLow, SharedAndWake, PullDown, 30000, "\\_SB.GIO0", ,) {192}
+           GpioIo(Shared, PullDown, 0, 0, IoRestrictionNone, "\\_SB.GIO0", 0, ResourceConsumer, ,) {126}
        })
        Return (RBUF)
    }
-   
-   Method (_RMV, 0)  // Removable method
-    {
-        Return (0x0)  // 0x0 indicates the device is not removable
-    }
-
 
    Method(_DIS)
    {
