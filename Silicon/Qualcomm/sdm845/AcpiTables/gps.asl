@@ -13,7 +13,13 @@
 	})
     
     Name (_HID, "QCOM02B6")
+        Name (_HID, "QCOM02B6")  // _HID: Hardware ID
 	Alias(\_SB.PSUB, _SUB)
 	Name (_CID, "ACPI\QCOM24B4")
 	Name (_UID, 0)
+
+        Method (_STA, 0, NotSerialized)  // _STA: Status
+        {
+             Return (0x0F)
+        }
     }
