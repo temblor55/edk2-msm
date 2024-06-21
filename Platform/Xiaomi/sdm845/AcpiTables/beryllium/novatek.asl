@@ -128,8 +128,14 @@ Device (TSC1)
         }
     }
 
-    Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
+   Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
     {
-       //Empty
+        DEID = Buffer (ESNL){}
+        DVAL = 0x03
+        DEID = PGID /* \_SB_.TSC1.PGID */
+        If (^^ABD.AVBL)
+        {
+            ^^PEP0.FLD0 = DBUF /* \_SB_.TSC1.DBUF */
+        }
     }
 }
