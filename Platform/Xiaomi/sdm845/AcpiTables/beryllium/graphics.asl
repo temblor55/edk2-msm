@@ -2877,7 +2877,7 @@ Device (GPU0)
                 Package() { "PSTATE",   5,    414000000,     5,    Package() { "GPU",  51, },    Package() {              192            , } },
                 Package() { "PSTATE",   6,    342000000,     6,    Package() { "GPU",  41, },    Package() {              128            , } },
                 Package() { "PSTATE",   7,    247000000,     7,    Package() { "GPU",  31, },    Package() {              64            , } },
-                Package() { "PSTATE",   8,    180000000,     8,    Package() { "GPU",   0, },    Package() {              48            , } },
+                Package() { "PSTATE",   8,    160000000,     8,    Package() { "GPU",   0, },    Package() {              48            , } },
                 Package() { "PSTATE",   9,            0,     9,    Package() { "GPU",   0, },    Package() {              0            , } },
             }
         )
