@@ -2860,11 +2860,11 @@ Device (GPU0)
                 3, 
                 "GRAPHICS_FREQ_CONTROL",      
                 "CORE_CLOCK",                                        // Resource Type
-                9,                                                   // Num P-States in Set
+                10,                                                  // Num P-States in Set
                 1,                                                   // Num CustomData fields in Set
                 TRUE,                                                // Has Thermal Thresholds
-                5,                                                   // Initial P-State
-                3,                                                   // Stable Power P-State
+                6,                                                   // Initial P-State
+                4,                                                   // Stable Power P-State
             
                 //                                        Voltage
                 //                     ID       Value      Level   Thermal Thresholds    Custom Data Fields
