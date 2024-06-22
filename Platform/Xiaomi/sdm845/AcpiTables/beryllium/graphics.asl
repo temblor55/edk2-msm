@@ -2863,13 +2863,13 @@ Device (GPU0)
                 10,                                                  // Num P-States in Set
                 1,                                                   // Num CustomData fields in Set
                 TRUE,                                                // Has Thermal Thresholds
-                5,                                                   // Initial P-State
-                3,                                                   // Stable Power P-State
+                6,                                                   // Initial P-State
+                4,                                                   // Stable Power P-State
             
                 //                                        Voltage
                 //                     ID       Value      Level   Thermal Thresholds    Custom Data Fields
                 //                     ---    ----------   -----   --------------------  --------------------
-                Package() { "PSTATE",   0,    835000000,     0,    Package() { "GPU", 100, },    Package() {              432            , } },
+                Package() { "PSTATE",   0,    800000000,     0,    Package() { "GPU", 100, },    Package() {              432            , } },
                 Package() { "PSTATE",   1,    710000000,     1,    Package() { "GPU",  91, },    Package() {              416            , } },
                 Package() { "PSTATE",   2,    675000000,     2,    Package() { "GPU",  81, },    Package() {              384            , } },
                 Package() { "PSTATE",   3,    596000000,     3,    Package() { "GPU",  71, },    Package() {              320            , } },
