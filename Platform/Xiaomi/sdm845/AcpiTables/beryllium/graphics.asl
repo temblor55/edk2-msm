@@ -2869,15 +2869,16 @@ Device (GPU0)
                 //                                        Voltage
                 //                     ID       Value      Level   Thermal Thresholds    Custom Data Fields
                 //                     ---    ----------   -----   --------------------  --------------------
-                Package() { "PSTATE",   0,    710000000,     0,    Package() { "GPU", 100, },    Package() {              416            , } },
-                Package() { "PSTATE",   1,    675000000,     1,    Package() { "GPU",  91, },    Package() {              384            , } },
-                Package() { "PSTATE",   2,    596000000,     2,    Package() { "GPU",  81, },    Package() {              320            , } },
-                Package() { "PSTATE",   3,    520000000,     3,    Package() { "GPU",  71, },    Package() {              256            , } },
-                Package() { "PSTATE",   4,    414000000,     4,    Package() { "GPU",  56, },    Package() {              192            , } },
-                Package() { "PSTATE",   5,    342000000,     5,    Package() { "GPU",  47, },    Package() {              128            , } },
-                Package() { "PSTATE",   6,    247000000,     6,    Package() { "GPU",  35, },    Package() {              64            , } },
-                Package() { "PSTATE",   7,    180000000,     7,    Package() { "GPU",   0, },    Package() {              48            , } },
-                Package() { "PSTATE",   8,            0,     8,    Package() { "GPU",   0, },    Package() {              0            , } },
+                Package() { "PSTATE",   0,    835000000,     0,    Package() { "GPU", 100, },    Package() {              432            , } },
+                Package() { "PSTATE",   1,    710000000,     1,    Package() { "GPU",  91, },    Package() {              416            , } },
+                Package() { "PSTATE",   2,    675000000,     2,    Package() { "GPU",  81, },    Package() {              384            , } },
+                Package() { "PSTATE",   3,    596000000,     3,    Package() { "GPU",  71, },    Package() {              320            , } },
+                Package() { "PSTATE",   4,    520000000,     4,    Package() { "GPU",  61, },    Package() {              256            , } },
+                Package() { "PSTATE",   5,    414000000,     5,    Package() { "GPU",  51, },    Package() {              192            , } },
+                Package() { "PSTATE",   6,    342000000,     6,    Package() { "GPU",  41, },    Package() {              128            , } },
+                Package() { "PSTATE",   7,    247000000,     7,    Package() { "GPU",  31, },    Package() {              64            , } },
+                Package() { "PSTATE",   8,    180000000,     8,    Package() { "GPU",   0, },    Package() {              48            , } },
+                Package() { "PSTATE",   9,            0,     9,    Package() { "GPU",   0, },    Package() {              0            , } },
             }
         )
         
