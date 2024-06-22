@@ -2864,7 +2864,7 @@ Device (GPU0)
                 1,                                                   // Num CustomData fields in Set
                 TRUE,                                                // Has Thermal Thresholds
                 6,                                                   // Initial P-State
-                4,                                                   // Stable Power P-State
+                5,                                                   // Stable Power P-State
             
                 //                                        Voltage
                 //                     ID       Value      Level   Thermal Thresholds    Custom Data Fields
