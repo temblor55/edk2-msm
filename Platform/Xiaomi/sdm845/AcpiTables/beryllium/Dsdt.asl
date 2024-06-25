@@ -27,7 +27,7 @@ DefinitionBlock("DSDT.AML", "DSDT", 0x02, "QCOMM ", "SDM850 ", 3)
 		//
         // FingerPrint
         //
-        Include("cust_fingerprint")
+        Include("cust_fingerprint.asl")
 		
 		//
         // Buttons
