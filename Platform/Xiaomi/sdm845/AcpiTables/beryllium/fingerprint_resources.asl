@@ -4,7 +4,7 @@ Scope (\_SB.PEP0)
 	{
 		Return (FPXC) /* \_SB_.PEP0.FPXC */
 	}
-	
+
 	Name (FPXC, Package (0x01)
 	{
 		Package (0x04)
@@ -12,8 +12,8 @@ Scope (\_SB.PEP0)
 			"DEVICE", 
 			"\\_SB.FPRT", 
 			Package (0x08)
-			{
-				"DSTATE", 
+			{ // beryllium uses an ic with enable pin to control power to fp, while yoga shuts and turns on a regulator
+				/*"DSTATE", 
 				Zero, 
 				Package (0x02)
 				{
@@ -21,11 +21,25 @@ Scope (\_SB.PEP0)
 					Package (0x06)
 					{
 						"PPP_RESOURCE_ID_LDO19_A", 
+						One, 				// Voltage Regulator Type, 1 = LDO
+						0x002F4D60, 	// Voltage (uV)
+						One, 				// Enable
+						0x07, 				// Power Mode
+						Zero 				// Headroom
+					}
+				}, */
+
+				Package (0x02)//enable
+				{
+					"TLMMGPIO", 
+					Package (0x06)
+					{
+						94, 
 						One, 
-						0x002F4D60, 
+						Zero, 
 						One, 
-						0x07, 
-						Zero
+						0x03, 
+						0x07
 					}
 				}, 
 
@@ -43,12 +57,12 @@ Scope (\_SB.PEP0)
 					"TLMMGPIO", 
 					Package (0x06)
 					{
-						0x79, 
-						One, 
-						Zero, 
-						One, 
-						Zero, 
-						Zero
+						121,  	// TLMM GPIO
+						One, 	// State 					: 1 = HIGH
+						Zero, 	// Function Select  	:  0 = ??
+						One,  	// Direction       		:   0 = INPUT
+						Zero, 	// Pull Type       		:   1 = PULL_DOWN
+						Zero 	// Drive Strength  	:   0 = 2mA
 					}
 				}, 
 
@@ -57,7 +71,7 @@ Scope (\_SB.PEP0)
 					"TLMMGPIO", 
 					Package (0x06)
 					{
-						0x68, 
+						37, 
 						One, 
 						Zero, 
 						One, 
@@ -80,7 +94,7 @@ Scope (\_SB.PEP0)
 					"TLMMGPIO", 
 					Package (0x06)
 					{
-						0x79, 
+						121, 
 						One, 
 						Zero, 
 						One, 
@@ -92,7 +106,7 @@ Scope (\_SB.PEP0)
 
 			Package (0x03)
 			{
-				"DSTATE", 
+				/*"DSTATE", 
 				0x03, 
 				Package (0x02)
 				{
@@ -106,7 +120,22 @@ Scope (\_SB.PEP0)
 						Zero, 
 						Zero
 					}
-				}
+				}*/
+				
+				Package (0x02)//disable
+				{
+					"TLMMGPIO", 
+					Package (0x06)
+					{
+						94, 
+						Zero, 
+						Zero, 
+						Zero, 
+						One, 
+						Zero
+					}
+				}, 
+				
 			}
 		}
 	})
