@@ -15,7 +15,7 @@ Device (FPRT)
 	{
 		Name (BBUF, ResourceTemplate ()
 		{
-			GpioIo (Exclusive, PullUp, 0, 0, IoRestrictionNone, "\\_SB.GIO0", 0, ResourceConsumer, , ) { 104 }
+			GpioIo (Exclusive, PullUp, 0, 0, IoRestrictionNone, "\\_SB.GIO0", 0, ResourceConsumer, , ) { 37 }
 			GpioInt (Edge, ActiveHigh, ExclusiveAndWake, PullNone, 0, "\\_SB.GIO0", 0, ResourceConsumer, , ) { 121 }
 		})
 		Return (BBUF) /* \_SB_.FPRT._CRS.BBUF */
