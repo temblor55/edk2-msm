@@ -23,7 +23,12 @@ DefinitionBlock("DSDT.AML", "DSDT", 0x02, "QCOMM ", "SDM850 ", 3)
         // Touch and panel xml
         //
         Include("panel.asl")
-
+		
+		//
+        // FingerPrint
+        //
+        Include("cust_fingerprint")
+		
 		//
         // Buttons
 		//
