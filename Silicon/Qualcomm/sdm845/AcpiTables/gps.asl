@@ -16,9 +16,4 @@
 	Alias(\_SB.PSUB, _SUB)
 	Name (_CID, "ACPI\QCOM24B4") // _CID: Compatible ID
 	Name (_UID, 0) // _UID: Unique ID
-
-        Method (_STA, 0, NotSerialized)  // _STA: Status
-        {
-             Return (0x0F)
-        }
     }
