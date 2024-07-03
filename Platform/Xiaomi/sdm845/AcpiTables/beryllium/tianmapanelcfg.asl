@@ -24,11 +24,11 @@ Name (PCFA, Buffer(){"
 </Group>
 <Group id='EDID Configuration'>
 	<HorizontalScreenSize>7</HorizontalScreenSize>
-	<VerticalScreenSize>14</VerticalScreenSize>
+	<VerticalScreenSize>15</VerticalScreenSize>
 </Group>
 <Group id='Detailed Timing'>
-    <HorizontalScreenSizeMM>68</HorizontalScreenSizeMM>
-    <VerticalScreenSizeMM>140</VerticalScreenSizeMM>
+    <HorizontalScreenSizeMM>75</HorizontalScreenSizeMM>
+    <VerticalScreenSizeMM>155</VerticalScreenSizeMM>
     <HorizontalVerticalScreenSizeMM>0x00</HorizontalVerticalScreenSizeMM>
 </Group>
 <Group id='Display Interface'>
