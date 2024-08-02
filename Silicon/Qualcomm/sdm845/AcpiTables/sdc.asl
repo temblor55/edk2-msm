@@ -5,7 +5,6 @@ Device (SDC2)
 {
    Name (_DEP, Package(0x2) {
        \_SB_.PEP0,
-       \_SB_.GIO0
    })
 
    Name (_HID, "QCOM2466")
@@ -21,14 +20,23 @@ Device (SDC2)
            Memory32Fixed (ReadWrite, 0x8804000, 0x00001000)
 
            Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive, , , ) {236}
-
-           // Card detect GPIO
-           GpioInt(Level, ActiveLow, SharedAndWake, PullDown, 30000, "\\_SB.GIO0", ,) {192}
-           GpioIo(Shared, PullDown, 0, 0, IoRestrictionNone, "\\_SB.GIO0", 0, ResourceConsumer, ,) {126}
        })
        Return (RBUF)
    }
    
+   Device (EMMC)
+   {
+       Method (_ADR, 0, NotSerialized)  // _ADR: Address
+       {
+           Return (0x08)
+       }
+
+       Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
+       {
+           Return (Zero)
+       }
+   }
+
    Method(_DIS)
    {
       // Place holder to allow disable
