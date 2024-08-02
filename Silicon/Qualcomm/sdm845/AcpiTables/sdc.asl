@@ -3,7 +3,7 @@
 //
 Device (SDC2)
 {
-   Name (_DEP, Package(0x2) {
+   Name (_DEP, Package(0x1) {
        \_SB_.PEP0,
    })
 
