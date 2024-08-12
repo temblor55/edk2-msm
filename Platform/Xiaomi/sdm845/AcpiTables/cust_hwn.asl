@@ -1,5 +1,5 @@
 Name(HWNH, 0)
-Name(HWNL, 0)
+Name(HWNL, 1)
 
 //
 // HWN Haptics
@@ -141,7 +141,7 @@ Device (HWN0)
       Package()
       {
          1,  // PMIC number PMI8994
-         3,  // Total HWN LEDs
+         1,  // Total HWN LEDs
 
          //RGB LEDs
          411, // Fade interval in ms (0-511 ms)
