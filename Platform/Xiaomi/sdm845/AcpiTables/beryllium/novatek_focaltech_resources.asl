@@ -88,7 +88,7 @@ Scope (PEP0)
                                 0x4E20
                             }
                         }
-                    }, 
+                    }
 
                     //Package (0x05)
                     //{
