@@ -90,52 +90,52 @@ Scope (PEP0)
                         }
                     }
 
-                    //Package (0x05)
-                    //{
-                    //    "DSTATE", 
-                    //    0x03, 
-                    //    Package (0x02)
-                    //    {
-                    //        "PMICVREGVOTE", 
-                    //        Package (0x06)
-                    //        {
-                    //            "PPP_RESOURCE_ID_LDO14_A", 
-                    //            One, 
-                    //            Zero, 
-                    //            Zero, 
-                    //            0x05, 
-                    //            Zero
-                    //        }
-                    //    }, 
+                    Package (0x05)
+                    {
+                        "DSTATE", 
+                        0x03, 
+                        Package (0x02)
+                        {
+                            "PMICVREGVOTE", 
+                            Package (0x06)
+                            {
+                                "PPP_RESOURCE_ID_LDO14_A", 
+                                One, 
+                                Zero, 
+                                Zero, 
+                                0x05, 
+                                Zero
+                            }
+                        }, 
 
-                    //    Package (0x02)
-                    //    {
-                    //        "TLMMGPIO", 
-                    //        Package (0x06)
-                    //        {
-                    //            0x20, 
-                    //            Zero, 
-                    //            Zero, 
-                    //            Zero, 
-                    //            One, 
-                    //            Zero
-                    //        }
-                    //    }, 
+                        Package (0x02)
+                        {
+                            "TLMMGPIO", 
+                            Package (0x06)
+                            {
+                                0x20, 
+                                Zero, 
+                                Zero, 
+                                Zero, 
+                                One, 
+                                Zero
+                            }
+                        }, 
 
-                    //    Package (0x02)
-                    //    {
-                    //        "TLMMGPIO", 
-                    //        Package (0x06)
-                    //        {
-                    //            0x1F, 
-                    //            Zero, 
-                    //            Zero, 
-                    //            Zero, 
-                    //            One, 
-                    //            Zero
-                    //        }
-                    //    }
-                    //}
+                        Package (0x02)
+                        {
+                            "TLMMGPIO", 
+                            Package (0x06)
+                            {
+                                0x1F, 
+                                Zero, 
+                                Zero, 
+                                Zero, 
+                                One, 
+                                Zero
+                            }
+                        }
+                    }
                 }
             })
         }
