@@ -71,12 +71,12 @@ Scope (PEP0)
                             "TLMMGPIO", 
                             Package (0x06)
                             {
-                                0x20, 
-                                One, 
-                                Zero, 
-                                One, 
-                                Zero, 
-                                Zero
+                                0x20, // pin number = 32
+                                One,  // state: active = 1
+                                Zero, // function select = 0
+                                One,  // direction = 0/P
+                                Zero, // PULLNONE 
+                                Zero  // Driver string: 0x0 = 2mA
                             }
                         }, 
 
@@ -90,52 +90,52 @@ Scope (PEP0)
                         }
                     }, 
 
-                    Package (0x05)
-                    {
-                        "DSTATE", 
-                        0x03, 
-                        Package (0x02)
-                        {
-                            "PMICVREGVOTE", 
-                            Package (0x06)
-                            {
-                                "PPP_RESOURCE_ID_LDO14_A", 
-                                One, 
-                                Zero, 
-                                Zero, 
-                                0x05, 
-                                Zero
-                            }
-                        }, 
+                    //Package (0x05)
+                    //{
+                    //    "DSTATE", 
+                    //    0x03, 
+                    //    Package (0x02)
+                    //    {
+                    //        "PMICVREGVOTE", 
+                    //        Package (0x06)
+                    //        {
+                    //            "PPP_RESOURCE_ID_LDO14_A", 
+                    //            One, 
+                    //            Zero, 
+                    //            Zero, 
+                    //            0x05, 
+                    //            Zero
+                    //        }
+                    //    }, 
 
-                        Package (0x02)
-                        {
-                            "TLMMGPIO", 
-                            Package (0x06)
-                            {
-                                0x20, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                One, 
-                                Zero
-                            }
-                        }, 
+                    //    Package (0x02)
+                    //    {
+                    //        "TLMMGPIO", 
+                    //        Package (0x06)
+                    //        {
+                    //            0x20, 
+                    //            Zero, 
+                    //            Zero, 
+                    //            Zero, 
+                    //            One, 
+                    //            Zero
+                    //        }
+                    //    }, 
 
-                        Package (0x02)
-                        {
-                            "TLMMGPIO", 
-                            Package (0x06)
-                            {
-                                0x1F, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                One, 
-                                Zero
-                            }
-                        }
-                    }
+                    //    Package (0x02)
+                    //    {
+                    //        "TLMMGPIO", 
+                    //        Package (0x06)
+                    //        {
+                    //            0x1F, 
+                    //            Zero, 
+                    //            Zero, 
+                    //            Zero, 
+                    //            One, 
+                    //            Zero
+                    //        }
+                    //    }
+                    //}
                 }
             })
         }
