@@ -352,7 +352,6 @@ Name (PCFA, Buffer(){"
 	<BacklightPMICBankSelect>15</BacklightPMICBankSelect>
 	<BacklightPMICPWMFrequency>600000</BacklightPMICPWMFrequency>
 	<BacklightDefault>80</BacklightDefault>
-	<BacklightLowPower>40</BacklightLowPower>
 	<PMIPowerPmicNumber>1</PMIPowerPmicNumber>
 	<PMIPowerPmicModel>21</PMIPowerPmicModel>
 	<PMIPowerconfig>1</PMIPowerConfig>
