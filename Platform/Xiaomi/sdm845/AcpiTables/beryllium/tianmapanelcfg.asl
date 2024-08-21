@@ -345,4 +345,20 @@ Name (PCFA, Buffer(){"
  15 C4 54
  15 FF 10
 </DSIInitSequence>
+<Group id='Backlight Configuration'>
+	<BacklightType>1</BacklightType>
+	<BacklightPmicControlType>2</BacklightPmicControlType>
+	<BacklightSteps>100</BacklightSteps>
+	<BacklightPMICBankSelect>15</BacklightPMICBankSelect>
+	<BacklightPMICPWMFrequency>600000</BacklightPMICPWMFrequency>
+	<BacklightDefault>80</BacklightDefault>
+	<BacklightLowPower>40</BacklightLowPower>
+	<PMIPowerPmicNumber>1</PMIPowerPmicNumber>
+	<PMIPowerPmicModel>21</PMIPowerPmicModel>
+	<PMIPowerconfig>0</PMIPowerConfig>
+	<AdaptiveBrightnessFeature>1</AdaptiveBrightnessFeature>
+	<CABLEnable>True</CABLEnable>
+	<BrignessMinLuminance>200</BrignessMinLuminance>
+	<BrignessMaxLuminance>319970</BrignessMaxLuminance>
+</Group>
 "})
