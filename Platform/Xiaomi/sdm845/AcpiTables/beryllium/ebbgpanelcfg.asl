@@ -102,7 +102,7 @@ Name (PCFA, Buffer(){"
 	<PMIPowerPmicModel>21</PMIPowerPmicModel>
 	<PMIPowerconfig>0</PMIPowerConfig>
 	<AdaptiveBrightnessFeature>1</AdaptiveBrightnessFeature>
-	<CABLEnable>True</CABLEnable>
+	<CABLEnable>False</CABLEnable>
 	<BrignessMinLuminance>200</BrignessMinLuminance>
 	<BrignessMaxLuminance>319970</BrignessMaxLuminance>
 </Group>
