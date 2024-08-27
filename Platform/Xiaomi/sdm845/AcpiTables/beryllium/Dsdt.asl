@@ -55,7 +55,7 @@ DefinitionBlock("DSDT.AML", "DSDT", 0x02, "QCOMM ", "SDM850 ", 3)
 		//
         // Sillab FM chip
         //
-        Include("wcnss_fm.asl")
+        //Include("wcnss_fm.asl")
 
         //
         // Bluetooth
