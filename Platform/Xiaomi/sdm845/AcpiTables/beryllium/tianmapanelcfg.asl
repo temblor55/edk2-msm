@@ -356,7 +356,7 @@ Name (PCFA, Buffer(){"
 	<PMIPowerPmicNumber>1</PMIPowerPmicNumber>
 	<PMIPowerPmicModel>21</PMIPowerPmicModel>
 	<PMIPowerconfig>0</PMIPowerConfig>
-	<AdaptiveBrightnessFeature>1</AdaptiveBrightnessFeature>
+	<AdaptiveBrightnessFeature>0</AdaptiveBrightnessFeature>
 	<CABLEnable>False</CABLEnable>
 	<BrignessMinLuminance>200</BrignessMinLuminance>
 	<BrignessMaxLuminance>319970</BrignessMaxLuminance>
