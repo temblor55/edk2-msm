@@ -355,7 +355,7 @@ Name (PCFA, Buffer(){"
 	<BacklightLowPower>40</BacklightLowPower>
 	<PMIPowerPmicNumber>1</PMIPowerPmicNumber>
 	<PMIPowerPmicModel>21</PMIPowerPmicModel>
-	<PMIPowerconfig>2</PMIPowerConfig>
+	<PMIPowerconfig>0</PMIPowerConfig>
 	<AdaptiveBrightnessFeature>1</AdaptiveBrightnessFeature>
 	<CABLEnable>False</CABLEnable>
 	<BrignessMinLuminance>200</BrignessMinLuminance>
