@@ -1,5 +1,5 @@
 Name(HWNH, 0)
-Name(HWNL, 0)
+Name(HWNL, 1)
 
 //
 // HWN Haptics
