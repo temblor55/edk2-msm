@@ -1,2 +1,2 @@
-Include("novatek.asl")
+Include("focaltech.asl")
 Include("tianmapanelcfg.asl")
