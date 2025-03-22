@@ -33,7 +33,7 @@ jobs:
           
           # sdm845
           #- polaris
-          #- perseus
+          - perseus
           - beryllium-ebbg
           - beryllium-tianma
           
