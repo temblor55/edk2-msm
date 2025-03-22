@@ -16,7 +16,7 @@ jobs:
   build:
     name: Image Build
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     strategy:
       max-parallel: 8
@@ -56,7 +56,7 @@ jobs:
           wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
           sudo apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu $(lsb_release -cs) main"
           sudo apt-get update
-          sudo apt-get -y install build-essential uuid-dev clang llvm iasl nasm gcc-aarch64-linux-gnu abootimg python3.12-distutils python3-pil python3-git gettext
+          sudo apt-get -y install build-essential uuid-dev clang llvm iasl nasm gcc-aarch64-linux-gnu abootimg python3-distutils python3-pil python3-git gettext
           sudo apt-get install --install-recommends winehq-stable libgcc-s1:i386 libstdc++6:i386
 
       - name: Build an image for ${{ matrix.device }}
